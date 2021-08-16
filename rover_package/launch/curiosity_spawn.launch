@@ -1,0 +1,20 @@
+<launch>
+	
+	<arg name="x" default="0.0" />
+    <arg name="y" default="0.0" />
+    <arg name="z" default="1.0" />
+    <arg name="roll" default="0.0"/>
+    <arg name="pitch" default="0.0"/>
+    <arg name="yaw" default="0.0" />
+
+    <!-- Get the xacro file for the rover -->
+	<arg name="model" default="$(find rover_package)/urdf/curiosity_mars_rover.xacro"/>
+	
+	<!-- Convert the xacro robot information to UDRF and use it as a robot_description parameter -->
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
+
+	<!-- Use the robot_description to spawn rover in gazebo -->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
+    args="-urdf -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw) -model curiosity_mars_rover -param robot_description"/>
+ 		  
+</launch>
