@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find rover_package)/launch/curiosity_spwan.launch" />
+    <include file="$(find rover_package)/launch/rover_control.launch" />
+    <include file="$(find rover_package)/launch/rover_systems.launch" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rover_package)/rviz/curiosity_mars_rover.rviz" />
+</launch>
