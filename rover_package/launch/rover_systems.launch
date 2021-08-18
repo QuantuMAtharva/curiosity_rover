@@ -1,0 +1,4 @@
+<launch>
+    <node name="curiosity_rover_acker_man_node" pkg="rover_package" type="ackerman_steering_wheels.py" respawn="false" output="screen" args="" />
+    <node name="curiosity_rover_arms_and_mast_services_node" pkg="rover_package" type="arm_mast.py" respawn="false" output="screen" args="" />
+</launch>
