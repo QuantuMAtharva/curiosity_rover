@@ -1,5 +1,5 @@
 <launch>
-    <include file="$(find rover_package)/launch/curiosity_spwan.launch" />
+    <include file="$(find rover_package)/launch/curiosity_spawn.launch" />
     <include file="$(find rover_package)/launch/rover_control.launch" />
     <include file="$(find rover_package)/launch/rover_systems.launch" />
 
