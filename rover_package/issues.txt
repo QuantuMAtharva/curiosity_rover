@@ -1,0 +1,4 @@
+Some issues faced:
+
+ERROR: cannot launch node of type [rover_package/ackerman_steering_wheels.py]: Cannot locate node of type [ackerman_steering_wheels.py] in package [rover_package]. Make sure file exists in package path and permission is set to executable (chmod +x)
+ERROR: cannot launch node of type [rover_package/arm_mast.py]: Cannot locate node of type [arm_mast.py] in package [rover_package]. Make sure file exists in package path and permission is set to executable (chmod +x)
